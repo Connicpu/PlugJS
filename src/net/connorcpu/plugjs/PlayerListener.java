@@ -108,6 +108,11 @@ public class PlayerListener implements Listener {
     }
     
     @EventHandler
+    public void Interact(PlayerInteractEvent event) {
+        RaiseEvent("interact", event);
+    }
+    
+    @EventHandler
     public void InteractEntity(PlayerInteractEntityEvent event) {
         RaiseEvent("interactEntity", event);
     }

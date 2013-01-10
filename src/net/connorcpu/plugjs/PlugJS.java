@@ -24,7 +24,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  * @author Connor
  */
 public class PlugJS extends JavaPlugin {
-    protected ScriptEngine js;
+    public ScriptEngine js;
     HashMap<String, Object> persistence;
     Listener block;
     Listener enchantment;
@@ -68,9 +68,9 @@ public class PlugJS extends JavaPlugin {
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
             js.eval(new FileReader(getConfig().getString("script")));
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(PlugJS.class.getName()).log(Level.SEVERE, null, ex.getMessage());
+            Logger.getLogger(PlugJS.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ScriptException ex) {
-            Logger.getLogger(PlugJS.class.getName()).log(Level.SEVERE, null, ex.getMessage());
+            Logger.getLogger(PlugJS.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     public class ScriptLoader {
