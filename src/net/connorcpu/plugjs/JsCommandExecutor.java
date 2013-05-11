@@ -27,4 +27,7 @@ public class JsCommandExecutor extends Command {
         return executor.execute(sender, label, args);
     }
     
+    public JsCommand getExecutor() {
+        return executor;
+    }
 }
