@@ -12,4 +12,6 @@ import org.bukkit.command.CommandSender;
  */
 public interface JsCommand {
     public boolean execute(CommandSender sender, String commandLabel, String[] args);
+    
+    public Object getState();
 }
