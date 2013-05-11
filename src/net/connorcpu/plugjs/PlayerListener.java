@@ -73,7 +73,7 @@ public class PlayerListener implements Listener {
     }
     
     @EventHandler
-    public void Chat(PlayerChatEvent event) {
+    public void Chat(AsyncPlayerChatEvent event) {
         RaiseEvent("chat", event);
     }
     
@@ -158,7 +158,7 @@ public class PlayerListener implements Listener {
     }
     
     @EventHandler
-    public void PreLogin(PlayerPreLoginEvent event) {
+    public void PreLogin(AsyncPlayerPreLoginEvent event) {
         RaiseEvent("preLogin", event);
     }
     
