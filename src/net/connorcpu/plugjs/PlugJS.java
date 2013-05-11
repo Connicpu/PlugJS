@@ -37,6 +37,7 @@ public class PlugJS extends JavaPlugin {
     Listener vehicle;
     Listener weather;
     Listener world;
+    Listener spout;
     
     public void onEnable() {
         Reload(true);
@@ -51,6 +52,10 @@ public class PlugJS extends JavaPlugin {
         vehicle = new VehicleListener(this);
         weather = new WeatherListener(this);
         world = new WorldListener(this);
+        
+        if (getServer().getPluginManager().getPlugin("Spout") != null) {
+            spout = new SpoutListener(this);
+        }
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
