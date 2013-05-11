@@ -7,6 +7,7 @@ package net.connorcpu.plugjs;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.HashMap;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.script.Invocable;
@@ -73,6 +74,11 @@ public class PlugJS extends JavaPlugin {
             Logger.getLogger(PlugJS.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public JsCommandExecutor createCommand(String name, String description, String usage, List<String> aliases, JsCommand command) {
+        return new JsCommandExecutor(name, description, usage, aliases, command);
+    }
+    
     public class ScriptLoader {
         public void Run(Object r) {
             Invocable inv = (Invocable) js;
