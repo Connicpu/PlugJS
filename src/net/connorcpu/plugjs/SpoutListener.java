@@ -63,11 +63,6 @@ public class SpoutListener implements Listener {
     }
 
     @EventHandler
-    public void onScreenEvent(ScreenEvent event) {
-        RaiseEvent("event", "screen", event);
-    }
-
-    @EventHandler
     public void onScreenOpen(ScreenOpenEvent event) {
         RaiseEvent("open", "screen", event);
     }
@@ -95,11 +90,6 @@ public class SpoutListener implements Listener {
     @EventHandler
     public void onScreenClick(ButtonClickEvent event) {
         RaiseEvent("buttonClick", "screen", event);
-    }
-    
-    @EventHandler
-    public void onSlotEvent(SlotEvent event) {
-        RaiseEvent("event", "slot", event);
     }
     
     @EventHandler

@@ -2,6 +2,7 @@ main: net.connorcpu.plugjs.PlugJS
 name: PlugJS
 version: 1.0
 description: Javascript environment for bukkit
+softdepend: [Spout]
 commands:
   reloadjs:
     usage: /<command>
