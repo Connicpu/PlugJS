@@ -66,6 +66,11 @@ public class EntityListener implements Listener {
     }
     
     @EventHandler
+    public void Damage(EntityDamageEvent event) {
+        RaiseEvent("damage", event);
+    }
+    
+    @EventHandler
     public void DamageByBlock(EntityDamageByBlockEvent event) {
         RaiseEvent("damageByBlock", event);
     }
